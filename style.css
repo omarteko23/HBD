@@ -1083,15 +1083,15 @@ h1 {
     }
 
 
-        .photos {
-            height: 330px;
-        }
-    
-        .photos .photo {
-            width: 210px;
-            height: 285px;
-            border-radius: 18px;
-        }
+    .photos {
+        height: 330px;
+    }
+
+    .photos .photo {
+        width: 210px;
+        height: 285px;
+        border-radius: 18px;
+    }
 
 
     /* زر الرسالة */
@@ -1174,4 +1174,70 @@ h1 {
         letter-spacing: 3px;
     }
 
+}
+/* =========================
+   التوقيع ❤️
+========================= */
+
+.signature {
+    margin-top: 25px;
+
+    opacity: 0;
+    transform: translateY(15px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+
+    text-align: center;
+}
+
+.final-message.show .signature {
+    opacity: 1;
+    transform: translateY(0);
+
+    transition-delay: 1s;
+}
+
+.signature p {
+    margin: 0;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    color: white;
+
+    letter-spacing: 0.5px;
+}
+
+.signature span {
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 14px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    line-height: 1.7;
+}
+
+
+/* الموبايل */
+
+@media (max-width: 600px) {
+
+    .signature {
+        margin-top: 22px;
+    }
+
+    .signature p {
+        font-size: 16px;
+    }
+
+    .signature span {
+        font-size: 13px;
+        line-height: 1.8;
+    }
 }
