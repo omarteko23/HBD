@@ -1,0 +1,1177 @@
+/* =========================
+   إعدادات عامة
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(135deg,
+            #d94670,
+            #c83d68,
+            #9b4d96);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    overflow-x: hidden;
+
+    overflow-y: auto;
+
+    padding: 30px 0;
+}
+
+
+/* =========================
+   المحتوى الرئيسي
+========================= */
+
+.container {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 90%;
+
+    max-width: 600px;
+
+    background:
+        rgba(255, 255, 255, 0.25);
+
+    backdrop-filter: blur(10px);
+
+    padding: 45px 30px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.2);
+
+    animation:
+        appear 1.5s ease;
+
+    margin: auto;
+}
+
+
+/* =========================
+   العناوين
+========================= */
+
+h1 {
+
+    color: #ffffff;
+
+    font-size: 40px;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.intro {
+
+    color: white;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   منطقة الهدية 🎁
+========================= */
+
+.gift-area {
+
+    margin-top: 30px;
+}
+
+
+.gift-text {
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   الهدية
+========================= */
+
+.gift {
+
+    position: relative;
+
+    width: 160px;
+
+    height: 150px;
+
+    margin: 30px auto;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease;
+
+    animation:
+        giftBounce 2s infinite;
+
+    filter:
+        drop-shadow(0 15px 15px rgba(0, 0, 0, 0.2));
+}
+
+
+.gift:hover {
+
+    transform:
+        scale(1.08);
+}
+
+
+/* =========================
+   جسم الهدية
+========================= */
+
+.gift-box {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 15px;
+
+    width: 130px;
+
+    height: 95px;
+
+    background:
+        linear-gradient(135deg,
+            #ff5f7e,
+            #e9365d);
+
+    border-radius:
+        8px 8px 14px 14px;
+
+    box-shadow:
+
+        inset 0 4px 8px rgba(255, 255, 255, 0.25),
+
+        0 12px 20px rgba(0, 0, 0, 0.2);
+
+    overflow: visible;
+}
+
+
+/* =========================
+   النور اللي بيطلع من الهدية
+========================= */
+
+.gift-box::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 90px;
+
+    height: 90px;
+
+    left: 50%;
+
+    top: -45px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        radial-gradient(circle,
+            rgba(255, 255, 220, 0.95) 0%,
+            rgba(255, 220, 100, 0.5) 35%,
+            rgba(255, 220, 100, 0) 70%);
+
+    border-radius: 50%;
+
+    opacity: 0;
+
+    transition: 0.5s;
+
+    pointer-events: none;
+}
+
+
+.gift.opened .gift-box::before {
+
+    opacity: 1;
+
+    animation:
+        giftGlow 1.5s ease infinite alternate;
+}
+
+
+/* =========================
+   لمعة الهدية
+========================= */
+
+.gift-shine {
+
+    position: absolute;
+
+    top: 15px;
+
+    left: 15px;
+
+    width: 35px;
+
+    height: 55px;
+
+    background:
+        rgba(255, 255, 255, 0.18);
+
+    border-radius: 50%;
+
+    transform:
+        rotate(25deg);
+}
+
+
+/* =========================
+   غطاء الهدية
+========================= */
+
+.gift-lid {
+
+    position: absolute;
+
+    top: 35px;
+
+    left: 5px;
+
+    width: 150px;
+
+    height: 35px;
+
+    background:
+        linear-gradient(135deg,
+            #ff7892,
+            #ee4164);
+
+    border-radius: 7px;
+
+    z-index: 5;
+
+    transition:
+        transform 0.8s cubic-bezier(.2, .8, .2, 1),
+
+        opacity 0.5s ease;
+
+    box-shadow:
+        0 7px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* الغطاء يطير */
+
+.gift.opened .gift-lid {
+
+    transform:
+        translateY(-100px) rotate(-18deg) scale(0.9);
+
+    opacity: 0;
+}
+
+
+/* =========================
+   الشريط الأفقي
+========================= */
+
+.ribbon-horizontal {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    width: 25px;
+
+    height: 100%;
+
+    background:
+        linear-gradient(90deg,
+            #ffd86b,
+            #fff0a8,
+            #ffd15c);
+}
+
+
+/* =========================
+   الفيـونكة 🎀
+========================= */
+
+.bow {
+
+    position: absolute;
+
+    top: -25px;
+
+    left: 50%;
+
+    width: 70px;
+
+    height: 45px;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 10;
+}
+
+
+.bow-left {
+
+    position: absolute;
+
+    left: 0;
+
+    top: 5px;
+
+    width: 38px;
+
+    height: 28px;
+
+    background:
+        linear-gradient(135deg,
+            #ffd86b,
+            #ffbd32);
+
+    border-radius:
+        50% 15% 50% 15%;
+
+    transform:
+        rotate(25deg);
+
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+.bow-right {
+
+    position: absolute;
+
+    right: 0;
+
+    top: 5px;
+
+    width: 38px;
+
+    height: 28px;
+
+    background:
+        linear-gradient(225deg,
+            #ffd86b,
+            #ffbd32);
+
+    border-radius:
+        15% 50% 15% 50%;
+
+    transform:
+        rotate(-25deg);
+
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+.bow-center {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 10px;
+
+    width: 18px;
+
+    height: 18px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        #ffc43d;
+
+    border-radius: 50%;
+
+    z-index: 2;
+
+    box-shadow:
+        0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   النص تحت الهدية
+========================= */
+
+.click-text {
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   المفاجأة
+========================= */
+
+#surprise {
+
+    display: none;
+
+    margin-top: 30px;
+
+    animation:
+        surpriseAppear 1s ease;
+}
+
+
+.birthday-reveal {
+
+    color: white;
+}
+
+
+.cake {
+
+    font-size: 80px;
+
+    margin-bottom: 10px;
+}
+
+
+.birthday-reveal h2 {
+
+    font-size: 30px;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+.birthday-reveal>p {
+
+    font-size: 18px;
+
+    line-height: 2;
+
+    margin: 10px 0;
+}
+
+
+/* =========================
+   القلوب
+========================= */
+
+.hearts {
+
+    font-size: 25px;
+
+    margin: 25px 0;
+
+    animation:
+        heartBeat 1.5s infinite;
+}
+
+
+/* =========================
+   الصور 📸
+========================= */
+
+.photo-gallery {
+
+    margin-top: 35px;
+}
+
+
+.photo-gallery h3 {
+
+    font-size: 22px;
+
+    margin-bottom: 20px;
+}
+
+
+.photos {
+    position: relative;
+    width: 100%;
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.photos .photo {
+    position: absolute;
+    width: 240px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+
+    opacity: 0;
+
+    transform:
+        scale(0.9) translateY(20px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.photos .photo.active {
+    opacity: 1;
+
+    transform:
+        scale(1) translateY(0);
+}
+
+
+/* =========================
+   زر الرسالة ❤️
+========================= */
+
+#messageButton {
+
+    margin-top: 35px;
+
+    padding: 15px 25px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 255, 255, 0.9);
+
+    color: #d6285f;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+#messageButton:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   الرسالة الشخصية 💌
+========================= */
+
+#personalMessage {
+
+    display: none;
+
+    margin-top: 35px;
+
+    padding: 25px 20px;
+
+    background:
+        rgba(255, 255, 255, 0.18);
+
+    border-radius: 22px;
+
+    box-shadow:
+        inset 0 0 20px rgba(255, 255, 255, 0.08);
+}
+
+
+#personalMessage h3 {
+
+    font-size: 23px;
+
+    margin-bottom: 20px;
+}
+
+
+#typedMessage {
+
+    font-size: 18px;
+
+    line-height: 2.1;
+
+    text-align: right;
+
+    white-space: pre-wrap;
+
+    color: white;
+}
+
+
+/* =========================
+   النهاية الكبيرة ❤️✨
+========================= */
+
+.final-message {
+
+    margin-top: 30px;
+
+    padding:
+        20px 10px 10px;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transform:
+        scale(0.8);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+
+/* الجملة الأخيرة */
+
+.final-line {
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    line-height: 1.8;
+
+    color: #d6285f;
+
+    text-shadow:
+        0 2px 8px rgba(214, 40, 95, 0.2);
+}
+
+
+/* القلوب الأخيرة */
+
+.final-hearts {
+
+    margin-top: 15px;
+
+    font-size: 25px;
+
+    letter-spacing: 5px;
+
+    animation:
+        finalHeartBeat 1.5s infinite;
+}
+
+
+/* ظهور النهاية */
+
+.final-message.show {
+
+    opacity: 1;
+
+    transform:
+        scale(1);
+}
+
+
+/* =========================
+   الزخارف المتحركة
+========================= */
+
+#decorations {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    overflow: hidden;
+}
+
+
+.decoration {
+
+    position: absolute;
+
+    bottom: -50px;
+
+    animation:
+        floatUp linear forwards;
+}
+
+
+/* =========================
+   Animations
+========================= */
+
+@keyframes appear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes surpriseAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px) scale(0.95);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0) scale(1);
+    }
+}
+
+
+@keyframes giftBounce {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-8px);
+    }
+}
+
+
+@keyframes giftGlow {
+
+    from {
+
+        transform:
+            translateX(-50%) scale(0.8);
+
+        filter:
+            brightness(1);
+    }
+
+    to {
+
+        transform:
+            translateX(-50%) scale(1.2);
+
+        filter:
+            brightness(1.5);
+    }
+}
+
+
+@keyframes heartBeat {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+    }
+
+    50% {
+
+        transform:
+            scale(1.15);
+    }
+}
+
+
+@keyframes finalHeartBeat {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+    }
+
+    50% {
+
+        transform:
+            scale(1.15);
+    }
+}
+
+
+@keyframes floatUp {
+
+    from {
+
+        transform:
+            translateY(0) rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+
+        opacity: 1;
+    }
+
+    to {
+
+        transform:
+            translateY(-110vh) rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   تحسين الموبايل 📱❤️
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 15px 0;
+
+        align-items: flex-start;
+    }
+
+
+    /* الكارت الرئيسي */
+
+    .container {
+
+        width:
+            calc(100% - 24px);
+
+        max-width: none;
+
+        padding:
+            32px 16px;
+
+        border-radius: 24px;
+
+        margin: 0 auto;
+    }
+
+
+    /* العنوان */
+
+    h1 {
+
+        font-size: 30px;
+
+        line-height: 1.4;
+
+        margin-bottom: 12px;
+    }
+
+
+    /* الكلام تحت العنوان */
+
+    .intro {
+
+        font-size: 16px;
+
+        line-height: 1.8;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* منطقة الهدية */
+
+    .gift-area {
+
+        margin-top: 10px;
+    }
+
+
+    .gift-text {
+
+        font-size: 17px;
+
+        margin-bottom: 8px;
+    }
+
+
+    .gift {
+
+        width: 150px;
+
+        height: 145px;
+
+        margin: 25px auto;
+    }
+
+
+    .gift-box {
+
+        width: 120px;
+
+        height: 90px;
+
+        left: 15px;
+    }
+
+
+    .gift-lid {
+
+        width: 140px;
+
+        height: 34px;
+
+        left: 5px;
+
+        top: 34px;
+    }
+
+
+    .ribbon-horizontal {
+
+        width: 23px;
+    }
+
+
+    .bow {
+
+        transform:
+            translateX(-50%) scale(0.95);
+    }
+
+
+    .click-text {
+
+        font-size: 16px;
+
+        margin-top: 5px;
+    }
+
+
+    /* المفاجأة */
+
+    .birthday-reveal {
+
+        margin-top: 25px;
+    }
+
+
+    .birthday-reveal h2 {
+
+        font-size: 24px;
+
+        line-height: 1.6;
+
+        margin-bottom: 15px;
+    }
+
+
+    .cake {
+
+        font-size: 70px;
+
+        margin-bottom: 10px;
+    }
+
+
+    .birthday-reveal>p {
+
+        font-size: 16px;
+
+        line-height: 2;
+
+        margin: 10px 0;
+    }
+
+
+    .hearts {
+
+        font-size: 22px;
+
+        margin: 18px 0;
+    }
+
+
+    /* الصور */
+
+    .photo-gallery {
+
+        margin-top: 30px;
+    }
+
+
+    .photo-gallery h3 {
+
+        font-size: 20px;
+
+        margin-bottom: 18px;
+    }
+
+
+        .photos {
+            height: 330px;
+        }
+    
+        .photos .photo {
+            width: 210px;
+            height: 285px;
+            border-radius: 18px;
+        }
+
+
+    /* زر الرسالة */
+
+    #messageButton {
+
+        width: 90%;
+
+        max-width: 320px;
+
+        padding: 14px 18px;
+
+        font-size: 16px;
+
+        margin-top: 28px;
+    }
+
+
+    /* الرسالة */
+
+    #personalMessage {
+
+        margin-top: 30px;
+
+        padding: 20px 15px;
+
+        border-radius: 20px;
+    }
+
+
+    #personalMessage h3 {
+
+        font-size: 21px;
+
+        line-height: 1.6;
+
+        margin-bottom: 18px;
+    }
+
+
+    #typedMessage {
+
+        font-size: 16px;
+
+        line-height: 2;
+
+        text-align: right;
+
+        word-break: normal;
+
+        overflow-wrap: break-word;
+    }
+
+
+    /* النهاية */
+
+    .final-message {
+
+        margin-top: 25px;
+
+        padding:
+            18px 5px 5px;
+    }
+
+
+    .final-line {
+
+        font-size: 20px;
+
+        line-height: 1.8;
+    }
+
+
+    .final-hearts {
+
+        font-size: 22px;
+
+        margin-top: 15px;
+
+        letter-spacing: 3px;
+    }
+
+}

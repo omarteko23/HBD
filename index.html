@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>مفاجأة 👀🎁</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- القلوب والبالونات المتحركة -->
+    <div id="decorations"></div>
+
+    <!-- الموسيقى -->
+    <audio id="birthdayMusic" loop>
+        <source src="birthday-song.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="container">
+
+        <h1>عندي حاجة ليكي 👀</h1>
+
+        <p class="intro">
+            مش هقولك هي إيه علشان فضولك ده...
+            شوفي بنفسك 😌😅
+        </p>
+
+
+        <!-- =========================
+             الهدية 🎁
+        ========================== -->
+
+        <div class="gift-area">
+
+            <p class="gift-text">
+                دوسي هنا 👇
+            </p>
+
+            <div class="gift" onclick="openGift()">
+
+                <div class="gift-lid">
+
+                    <div class="ribbon-horizontal"></div>
+
+                    <div class="bow">
+
+                        <div class="bow-left"></div>
+
+                        <div class="bow-right"></div>
+
+                        <div class="bow-center"></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="gift-box">
+
+                    <div class="ribbon-vertical"></div>
+
+                    <div class="gift-shine"></div>
+
+                </div>
+
+            </div>
+
+
+            <p class="click-text">
+                👀 مستنية إيه؟
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             المفاجأة 🎉
+        ========================== -->
+
+        <div id="surprise">
+
+            <div class="birthday-reveal">
+
+                <div class="cake">
+                    🎂
+                </div>
+
+                <h1>
+                    🎉  كل سنة وأنتي طيبة يا تاليا يا غالية❤️
+                </h1>
+
+
+                <p>
+                    عارف إنها متأخره... بس قولت إن التهنئة الحلوة ملهاش وقت ❤️
+                </p>
+                
+                <p>
+                    حبيت أعملك حاجة صغيرة تفضل معاكي، حتى لو عيد ميلادك عدى ✨
+                </p>
+                
+                <p>
+                    وأتمنى إن السنة الجديدة من عمرك تكون بدأت بأحلى حاجة،
+                    وتكمل معاكي فرحة ونجاح وراحة بال，
+                    وتحققي فيها كل حاجة نفسك فيها ❤️
+                </p>
+
+
+                <div class="hearts">
+                    ❤️ 💕 💖 💗 ❤️
+                </div>
+
+
+                <!-- =========================
+                     الصور 📸
+                ========================== -->
+
+                <div class="photo-gallery">
+
+                    <h3>
+                        📸❤️🥰
+                    </h3>
+
+
+                    <div class="photos">
+                    
+                        <img src="images/img3.jpg" alt="صورة جميلة" class="photo active">
+                    
+                        <img src="images/img2.jpg" alt="صورة جميلة" class="photo">
+                    
+                        <img src="images/img1.jpg" alt="صورة جميلة" class="photo">
+                    
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     زر الرسالة ❤️
+                ========================== -->
+
+                <button id="messageButton" onclick="showMessage()">
+                    لسه مخلصناش... 👀❤️
+                </button>
+
+
+                <!-- =========================
+                     الرسالة الشخصية 💌
+                ========================== -->
+
+                <div id="personalMessage">
+
+                    <h3>
+                        في حاجة كمان عايز أقولها... ❤️
+                    </h3>
+
+
+                    <p id="typedMessage"></p>
+
+
+                    <!-- النهاية الكبيرة ❤️ -->
+
+                    <div class="final-message">
+
+                        <div class="final-line">
+                            ❤️ كل سنة وإنتي طيبة يا تاليا ❤️
+                        </div>
+
+
+                        <div class="final-hearts">
+                            ❤️ 💕 💖 💕 ❤️
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
