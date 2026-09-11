@@ -16,10 +16,12 @@ body {
     font-family: Arial, sans-serif;
 
     background:
-        linear-gradient(135deg,
+        linear-gradient(
+            135deg,
             #d94670,
             #c83d68,
-            #9b4d96);
+            #9b4d96
+        );
 
     display: flex;
 
@@ -40,7 +42,6 @@ body {
 ========================= */
 
 .container {
-
     position: relative;
 
     z-index: 2;
@@ -61,7 +62,8 @@ body {
     text-align: center;
 
     box-shadow:
-        0 10px 40px rgba(0, 0, 0, 0.2);
+        0 10px 40px
+        rgba(0, 0, 0, 0.2);
 
     animation:
         appear 1.5s ease;
@@ -75,7 +77,6 @@ body {
 ========================= */
 
 h1 {
-
     color: #ffffff;
 
     font-size: 40px;
@@ -83,12 +84,11 @@ h1 {
     margin-bottom: 15px;
 
     text-shadow:
-        0 3px 8px rgba(0, 0, 0, 0.2);
+        0 3px 8px
+        rgba(0, 0, 0, 0.2);
 }
 
-
 .intro {
-
     color: white;
 
     font-size: 18px;
@@ -102,13 +102,10 @@ h1 {
 ========================= */
 
 .gift-area {
-
     margin-top: 30px;
 }
 
-
 .gift-text {
-
     color: white;
 
     font-size: 18px;
@@ -122,7 +119,6 @@ h1 {
 ========================= */
 
 .gift {
-
     position: relative;
 
     width: 160px;
@@ -140,12 +136,13 @@ h1 {
         giftBounce 2s infinite;
 
     filter:
-        drop-shadow(0 15px 15px rgba(0, 0, 0, 0.2));
+        drop-shadow(
+            0 15px 15px
+            rgba(0, 0, 0, 0.2)
+        );
 }
 
-
 .gift:hover {
-
     transform:
         scale(1.08);
 }
@@ -156,7 +153,6 @@ h1 {
 ========================= */
 
 .gift-box {
-
     position: absolute;
 
     bottom: 0;
@@ -168,29 +164,33 @@ h1 {
     height: 95px;
 
     background:
-        linear-gradient(135deg,
+        linear-gradient(
+            135deg,
             #ff5f7e,
-            #e9365d);
+            #e9365d
+        );
 
     border-radius:
         8px 8px 14px 14px;
 
     box-shadow:
 
-        inset 0 4px 8px rgba(255, 255, 255, 0.25),
+        inset
+        0 4px 8px
+        rgba(255,255,255,0.25),
 
-        0 12px 20px rgba(0, 0, 0, 0.2);
+        0 12px 20px
+        rgba(0,0,0,0.2);
 
     overflow: visible;
 }
 
 
 /* =========================
-   النور اللي بيطلع من الهدية
+   نور الهدية
 ========================= */
 
 .gift-box::before {
-
     content: "";
 
     position: absolute;
@@ -207,10 +207,12 @@ h1 {
         translateX(-50%);
 
     background:
-        radial-gradient(circle,
-            rgba(255, 255, 220, 0.95) 0%,
-            rgba(255, 220, 100, 0.5) 35%,
-            rgba(255, 220, 100, 0) 70%);
+        radial-gradient(
+            circle,
+            rgba(255,255,220,0.95) 0%,
+            rgba(255,220,100,0.5) 35%,
+            rgba(255,220,100,0) 70%
+        );
 
     border-radius: 50%;
 
@@ -221,9 +223,8 @@ h1 {
     pointer-events: none;
 }
 
-
-.gift.opened .gift-box::before {
-
+.gift.opened
+.gift-box::before {
     opacity: 1;
 
     animation:
@@ -236,7 +237,6 @@ h1 {
 ========================= */
 
 .gift-shine {
-
     position: absolute;
 
     top: 15px;
@@ -248,7 +248,7 @@ h1 {
     height: 55px;
 
     background:
-        rgba(255, 255, 255, 0.18);
+        rgba(255,255,255,0.18);
 
     border-radius: 50%;
 
@@ -262,7 +262,6 @@ h1 {
 ========================= */
 
 .gift-lid {
-
     position: absolute;
 
     top: 35px;
@@ -274,30 +273,37 @@ h1 {
     height: 35px;
 
     background:
-        linear-gradient(135deg,
+        linear-gradient(
+            135deg,
             #ff7892,
-            #ee4164);
+            #ee4164
+        );
 
     border-radius: 7px;
 
     z-index: 5;
 
     transition:
-        transform 0.8s cubic-bezier(.2, .8, .2, 1),
+        transform
+        0.8s
+        cubic-bezier(.2,.8,.2,1),
 
-        opacity 0.5s ease;
+        opacity
+        0.5s ease;
 
     box-shadow:
-        0 7px 12px rgba(0, 0, 0, 0.2);
+        0 7px 12px
+        rgba(0,0,0,0.2);
 }
 
 
 /* الغطاء يطير */
 
 .gift.opened .gift-lid {
-
     transform:
-        translateY(-100px) rotate(-18deg) scale(0.9);
+        translateY(-100px)
+        rotate(-18deg)
+        scale(0.9);
 
     opacity: 0;
 }
@@ -308,7 +314,6 @@ h1 {
 ========================= */
 
 .ribbon-horizontal {
-
     position: absolute;
 
     top: 0;
@@ -323,10 +328,12 @@ h1 {
     height: 100%;
 
     background:
-        linear-gradient(90deg,
+        linear-gradient(
+            90deg,
             #ffd86b,
             #fff0a8,
-            #ffd15c);
+            #ffd15c
+        );
 }
 
 
@@ -335,7 +342,6 @@ h1 {
 ========================= */
 
 .bow {
-
     position: absolute;
 
     top: -25px;
@@ -352,9 +358,7 @@ h1 {
     z-index: 10;
 }
 
-
 .bow-left {
-
     position: absolute;
 
     left: 0;
@@ -366,9 +370,11 @@ h1 {
     height: 28px;
 
     background:
-        linear-gradient(135deg,
+        linear-gradient(
+            135deg,
             #ffd86b,
-            #ffbd32);
+            #ffbd32
+        );
 
     border-radius:
         50% 15% 50% 15%;
@@ -377,12 +383,11 @@ h1 {
         rotate(25deg);
 
     box-shadow:
-        0 4px 6px rgba(0, 0, 0, 0.15);
+        0 4px 6px
+        rgba(0,0,0,0.15);
 }
 
-
 .bow-right {
-
     position: absolute;
 
     right: 0;
@@ -394,9 +399,11 @@ h1 {
     height: 28px;
 
     background:
-        linear-gradient(225deg,
+        linear-gradient(
+            225deg,
             #ffd86b,
-            #ffbd32);
+            #ffbd32
+        );
 
     border-radius:
         15% 50% 15% 50%;
@@ -405,12 +412,11 @@ h1 {
         rotate(-25deg);
 
     box-shadow:
-        0 4px 6px rgba(0, 0, 0, 0.15);
+        0 4px 6px
+        rgba(0,0,0,0.15);
 }
 
-
 .bow-center {
-
     position: absolute;
 
     left: 50%;
@@ -432,7 +438,8 @@ h1 {
     z-index: 2;
 
     box-shadow:
-        0 3px 5px rgba(0, 0, 0, 0.2);
+        0 3px 5px
+        rgba(0,0,0,0.2);
 }
 
 
@@ -441,7 +448,6 @@ h1 {
 ========================= */
 
 .click-text {
-
     color: white;
 
     font-size: 17px;
@@ -451,11 +457,10 @@ h1 {
 
 
 /* =========================
-   المفاجأة
+   المفاجأة 🎉
 ========================= */
 
 #surprise {
-
     display: none;
 
     margin-top: 30px;
@@ -464,23 +469,17 @@ h1 {
         surpriseAppear 1s ease;
 }
 
-
 .birthday-reveal {
-
     color: white;
 }
 
-
 .cake {
-
     font-size: 80px;
 
     margin-bottom: 10px;
 }
 
-
 .birthday-reveal h2 {
-
     font-size: 30px;
 
     line-height: 1.6;
@@ -488,12 +487,11 @@ h1 {
     margin-bottom: 20px;
 
     text-shadow:
-        0 3px 8px rgba(0, 0, 0, 0.15);
+        0 3px 8px
+        rgba(0,0,0,0.15);
 }
 
-
-.birthday-reveal>p {
-
+.birthday-reveal > p {
     font-size: 18px;
 
     line-height: 2;
@@ -507,7 +505,6 @@ h1 {
 ========================= */
 
 .hearts {
-
     font-size: 25px;
 
     margin: 25px 0;
@@ -522,53 +519,75 @@ h1 {
 ========================= */
 
 .photo-gallery {
-
     margin-top: 35px;
 }
 
-
 .photo-gallery h3 {
-
     font-size: 22px;
 
     margin-bottom: 20px;
 }
 
 
+/* الصور واحدة ورا التانية */
+
 .photos {
     position: relative;
+
     width: 100%;
+
     height: 360px;
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     overflow: hidden;
 }
 
+
+/* الحركة السينمائية */
+
 .photos .photo {
     position: absolute;
+
     width: 240px;
+
     height: 320px;
+
     object-fit: cover;
+
     border-radius: 20px;
+
     box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.25);
+        0 10px 30px
+        rgba(0, 0, 0, 0.25);
 
     opacity: 0;
 
     transform:
-        scale(0.9) translateY(20px);
+        translateY(60px)
+        scale(0.92)
+        rotate(-2deg);
 
     transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
+        opacity 0.9s ease,
+        transform 1s
+        cubic-bezier(.22, 1, .36, 1);
 }
+
+
+/* الصورة الحالية */
 
 .photos .photo.active {
     opacity: 1;
 
     transform:
-        scale(1) translateY(0);
+        translateY(0)
+        scale(1)
+        rotate(0deg);
 }
 
 
@@ -577,7 +596,6 @@ h1 {
 ========================= */
 
 #messageButton {
-
     margin-top: 35px;
 
     padding: 15px 25px;
@@ -587,7 +605,7 @@ h1 {
     border-radius: 30px;
 
     background:
-        rgba(255, 255, 255, 0.9);
+        rgba(255,255,255,0.9);
 
     color: #d6285f;
 
@@ -598,21 +616,21 @@ h1 {
     cursor: pointer;
 
     box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.15);
+        0 8px 20px
+        rgba(0,0,0,0.15);
 
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
 }
 
-
 #messageButton:hover {
-
     transform:
         translateY(-3px);
 
     box-shadow:
-        0 12px 25px rgba(0, 0, 0, 0.2);
+        0 12px 25px
+        rgba(0,0,0,0.2);
 }
 
 
@@ -621,7 +639,6 @@ h1 {
 ========================= */
 
 #personalMessage {
-
     display: none;
 
     margin-top: 35px;
@@ -629,25 +646,23 @@ h1 {
     padding: 25px 20px;
 
     background:
-        rgba(255, 255, 255, 0.18);
+        rgba(255,255,255,0.18);
 
     border-radius: 22px;
 
     box-shadow:
-        inset 0 0 20px rgba(255, 255, 255, 0.08);
+        inset
+        0 0 20px
+        rgba(255,255,255,0.08);
 }
 
-
 #personalMessage h3 {
-
     font-size: 23px;
 
     margin-bottom: 20px;
 }
 
-
 #typedMessage {
-
     font-size: 18px;
 
     line-height: 2.1;
@@ -665,7 +680,6 @@ h1 {
 ========================= */
 
 .final-message {
-
     margin-top: 30px;
 
     padding:
@@ -687,7 +701,6 @@ h1 {
 /* الجملة الأخيرة */
 
 .final-line {
-
     font-size: 22px;
 
     font-weight: bold;
@@ -697,14 +710,14 @@ h1 {
     color: #d6285f;
 
     text-shadow:
-        0 2px 8px rgba(214, 40, 95, 0.2);
+        0 2px 8px
+        rgba(214, 40, 95, 0.2);
 }
 
 
 /* القلوب الأخيرة */
 
 .final-hearts {
-
     margin-top: 15px;
 
     font-size: 25px;
@@ -719,7 +732,6 @@ h1 {
 /* ظهور النهاية */
 
 .final-message.show {
-
     opacity: 1;
 
     transform:
@@ -728,11 +740,67 @@ h1 {
 
 
 /* =========================
+   التوقيع ❤️
+========================= */
+
+.signature {
+    margin-top: 25px;
+
+    opacity: 0;
+
+    transform:
+        translateY(15px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+
+    text-align: center;
+}
+
+
+.final-message.show .signature {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+    transition-delay: 1s;
+}
+
+
+.signature p {
+    margin: 0;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    color: white;
+
+    letter-spacing: 0.5px;
+}
+
+
+.signature span {
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 14px;
+
+    color:
+        rgba(255, 255, 255, 0.85);
+
+    line-height: 1.7;
+}
+
+
+/* =========================
    الزخارف المتحركة
 ========================= */
 
 #decorations {
-
     position: fixed;
 
     inset: 0;
@@ -744,9 +812,7 @@ h1 {
     overflow: hidden;
 }
 
-
 .decoration {
-
     position: absolute;
 
     bottom: -50px;
@@ -763,7 +829,6 @@ h1 {
 @keyframes appear {
 
     from {
-
         opacity: 0;
 
         transform:
@@ -771,7 +836,6 @@ h1 {
     }
 
     to {
-
         opacity: 1;
 
         transform:
@@ -783,19 +847,19 @@ h1 {
 @keyframes surpriseAppear {
 
     from {
-
         opacity: 0;
 
         transform:
-            translateY(30px) scale(0.95);
+            translateY(30px)
+            scale(0.95);
     }
 
     to {
-
         opacity: 1;
 
         transform:
-            translateY(0) scale(1);
+            translateY(0)
+            scale(1);
     }
 }
 
@@ -804,13 +868,11 @@ h1 {
 
     0%,
     100% {
-
         transform:
             translateY(0);
     }
 
     50% {
-
         transform:
             translateY(-8px);
     }
@@ -820,18 +882,18 @@ h1 {
 @keyframes giftGlow {
 
     from {
-
         transform:
-            translateX(-50%) scale(0.8);
+            translateX(-50%)
+            scale(0.8);
 
         filter:
             brightness(1);
     }
 
     to {
-
         transform:
-            translateX(-50%) scale(1.2);
+            translateX(-50%)
+            scale(1.2);
 
         filter:
             brightness(1.5);
@@ -843,13 +905,11 @@ h1 {
 
     0%,
     100% {
-
         transform:
             scale(1);
     }
 
     50% {
-
         transform:
             scale(1.15);
     }
@@ -860,13 +920,11 @@ h1 {
 
     0%,
     100% {
-
         transform:
             scale(1);
     }
 
     50% {
-
         transform:
             scale(1.15);
     }
@@ -876,22 +934,21 @@ h1 {
 @keyframes floatUp {
 
     from {
-
         transform:
-            translateY(0) rotate(0deg);
+            translateY(0)
+            rotate(0deg);
 
         opacity: 0;
     }
 
     10% {
-
         opacity: 1;
     }
 
     to {
-
         transform:
-            translateY(-110vh) rotate(360deg);
+            translateY(-110vh)
+            rotate(360deg);
 
         opacity: 0;
     }
@@ -905,17 +962,15 @@ h1 {
 @media (max-width: 600px) {
 
     body {
-
         padding: 15px 0;
 
         align-items: flex-start;
     }
 
 
-    /* الكارت الرئيسي */
+    /* الكارت */
 
     .container {
-
         width:
             calc(100% - 24px);
 
@@ -933,7 +988,6 @@ h1 {
     /* العنوان */
 
     h1 {
-
         font-size: 30px;
 
         line-height: 1.4;
@@ -942,10 +996,9 @@ h1 {
     }
 
 
-    /* الكلام تحت العنوان */
+    /* الكلام */
 
     .intro {
-
         font-size: 16px;
 
         line-height: 1.8;
@@ -954,16 +1007,14 @@ h1 {
     }
 
 
-    /* منطقة الهدية */
+    /* الهدية */
 
     .gift-area {
-
         margin-top: 10px;
     }
 
 
     .gift-text {
-
         font-size: 17px;
 
         margin-bottom: 8px;
@@ -971,7 +1022,6 @@ h1 {
 
 
     .gift {
-
         width: 150px;
 
         height: 145px;
@@ -981,7 +1031,6 @@ h1 {
 
 
     .gift-box {
-
         width: 120px;
 
         height: 90px;
@@ -991,7 +1040,6 @@ h1 {
 
 
     .gift-lid {
-
         width: 140px;
 
         height: 34px;
@@ -1003,20 +1051,18 @@ h1 {
 
 
     .ribbon-horizontal {
-
         width: 23px;
     }
 
 
     .bow {
-
         transform:
-            translateX(-50%) scale(0.95);
+            translateX(-50%)
+            scale(0.95);
     }
 
 
     .click-text {
-
         font-size: 16px;
 
         margin-top: 5px;
@@ -1026,13 +1072,11 @@ h1 {
     /* المفاجأة */
 
     .birthday-reveal {
-
         margin-top: 25px;
     }
 
 
     .birthday-reveal h2 {
-
         font-size: 24px;
 
         line-height: 1.6;
@@ -1042,15 +1086,13 @@ h1 {
 
 
     .cake {
-
         font-size: 70px;
 
         margin-bottom: 10px;
     }
 
 
-    .birthday-reveal>p {
-
+    .birthday-reveal > p {
         font-size: 16px;
 
         line-height: 2;
@@ -1060,7 +1102,6 @@ h1 {
 
 
     .hearts {
-
         font-size: 22px;
 
         margin: 18px 0;
@@ -1070,13 +1111,11 @@ h1 {
     /* الصور */
 
     .photo-gallery {
-
         margin-top: 30px;
     }
 
 
     .photo-gallery h3 {
-
         font-size: 20px;
 
         margin-bottom: 18px;
@@ -1087,9 +1126,12 @@ h1 {
         height: 330px;
     }
 
+
     .photos .photo {
         width: 210px;
+
         height: 285px;
+
         border-radius: 18px;
     }
 
@@ -1097,12 +1139,12 @@ h1 {
     /* زر الرسالة */
 
     #messageButton {
-
         width: 90%;
 
         max-width: 320px;
 
-        padding: 14px 18px;
+        padding:
+            14px 18px;
 
         font-size: 16px;
 
@@ -1113,17 +1155,16 @@ h1 {
     /* الرسالة */
 
     #personalMessage {
-
         margin-top: 30px;
 
-        padding: 20px 15px;
+        padding:
+            20px 15px;
 
         border-radius: 20px;
     }
 
 
     #personalMessage h3 {
-
         font-size: 21px;
 
         line-height: 1.6;
@@ -1133,7 +1174,6 @@ h1 {
 
 
     #typedMessage {
-
         font-size: 16px;
 
         line-height: 2;
@@ -1149,7 +1189,6 @@ h1 {
     /* النهاية */
 
     .final-message {
-
         margin-top: 25px;
 
         padding:
@@ -1158,7 +1197,6 @@ h1 {
 
 
     .final-line {
-
         font-size: 20px;
 
         line-height: 1.8;
@@ -1166,7 +1204,6 @@ h1 {
 
 
     .final-hearts {
-
         font-size: 22px;
 
         margin-top: 15px;
@@ -1174,70 +1211,23 @@ h1 {
         letter-spacing: 3px;
     }
 
-}
-/* =========================
-   التوقيع ❤️
-========================= */
 
-.signature {
-    margin-top: 25px;
-
-    opacity: 0;
-    transform: translateY(15px);
-
-    transition:
-        opacity 1s ease,
-        transform 1s ease;
-
-    text-align: center;
-}
-
-.final-message.show .signature {
-    opacity: 1;
-    transform: translateY(0);
-
-    transition-delay: 1s;
-}
-
-.signature p {
-    margin: 0;
-
-    font-size: 17px;
-
-    font-weight: bold;
-
-    color: white;
-
-    letter-spacing: 0.5px;
-}
-
-.signature span {
-    display: block;
-
-    margin-top: 8px;
-
-    font-size: 14px;
-
-    color: rgba(255, 255, 255, 0.85);
-
-    line-height: 1.7;
-}
-
-
-/* الموبايل */
-
-@media (max-width: 600px) {
+    /* التوقيع */
 
     .signature {
         margin-top: 22px;
     }
 
+
     .signature p {
         font-size: 16px;
     }
 
+
     .signature span {
         font-size: 13px;
+
         line-height: 1.8;
     }
+
 }
